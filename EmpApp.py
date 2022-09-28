@@ -28,6 +28,8 @@ def employee():
     cur = db_conn.cursor()
     cur.execute("SELECT * FROM employee")
     data = cur.fetchall()
+    cur.close()
+    print(employee)
     # return render_template('AddEmp.html')
     
     return render_template('employee.html', data=data)
